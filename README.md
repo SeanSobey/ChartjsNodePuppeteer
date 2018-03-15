@@ -46,11 +46,25 @@ const configuration = {
         }
     }
 };
-// This
+// This will run in the browser context, serialized via .toString()
 const chartCallback: ChartCallback = (ChartJS) => {
 
     ChartJS.defaults.global.responsive = true;
     ChartJS.defaults.global.maintainAspectRatio = false;
 };
-
+(async () => {
+    const canvasRenderService = new CanvasRenderService();
+    try    {
+        canvasRenderService.on('console', consoleMessage => console.log(consoleMessage.text()));
+        canvasRenderService.on('error', error => console.error(error));
+        canvasRenderService.on('pageerror', pageerror => console.error(pageerror));
+        await canvasRenderService.initialize(width, height, chartCallback, scripts);
+        const image = await canvasRenderService.render(configuration);
+        await canvasRenderService.dispose();
+        assert.equal(image instanceof Buffer, true);
+    } catch (error) {
+        await canvasRenderService.dispose();
+        throw error;
+    }
+})();
 ```
