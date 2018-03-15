@@ -11,17 +11,17 @@
     "watch-test": "mocha --watch --opts ./mocha.opts dist/**/*.spec.js"
   },
   "bugs": {
-    "url": "https://github.com/SeanSobey/chartjs-node-puppeteer/issues",
+    "url": "https://github.com/SeanSobey/ChartjsNodePuppeteer/issues",
     "email": "sean.m.sobey@gmail.com"
   },
   "author": {
     "name": "Sean Sobey",
     "email": "sean.m.sobey@gmail.com"
   },
-  "homepage": "https://github.com/SeanSobey/chartjs-node-puppeteer",
+  "homepage": "https://github.com/SeanSobey/ChartjsNodePuppeteer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SeanSobey/chartjs-node-puppeteer.git"
+    "url": "https://github.com/SeanSobey/ChartjsNodePuppeteer.git"
   },
   "readme": "README.md",
   "license": "LICENSE",
