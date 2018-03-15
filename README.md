@@ -47,7 +47,7 @@ const configuration = {
     }
 };
 // This will run in the browser context, serialized via .toString()
-const chartCallback: ChartCallback = (ChartJS) => {
+const chartCallback = (ChartJS) => {
 
     ChartJS.defaults.global.responsive = true;
     ChartJS.defaults.global.maintainAspectRatio = false;
@@ -61,7 +61,6 @@ const chartCallback: ChartCallback = (ChartJS) => {
         await canvasRenderService.initialize(width, height, chartCallback, scripts);
         const image = await canvasRenderService.render(configuration);
         await canvasRenderService.dispose();
-        assert.equal(image instanceof Buffer, true);
     } catch (error) {
         await canvasRenderService.dispose();
         throw error;
