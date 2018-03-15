@@ -1,0 +1,48 @@
+{
+  "name": "chartjs-node-puppeteer",
+  "version": "1.0.0",
+  "description": "A node renderer for Chart.js using puppeteer.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --opts ./mocha.opts dist/**/*.spec.js",
+    "debug-test": "node --inspect-brk=33295 --nolazy node_modules/mocha/bin/_mocha --opts ./mocha.opts dist/**/*.spec.js",
+    "watch-build": "tsc --watch",
+    "watch-test": "mocha --watch --opts ./mocha.opts dist/**/*.spec.js"
+  },
+  "bugs": {
+    "url": "https://github.com/SeanSobey/chartjs-node-puppeteer/issues",
+    "email": "sean.m.sobey@gmail.com"
+  },
+  "author": {
+    "name": "Sean Sobey",
+    "email": "sean.m.sobey@gmail.com"
+  },
+  "homepage": "https://github.com/SeanSobey/chartjs-node-puppeteer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeanSobey/chartjs-node-puppeteer.git"
+  },
+  "readme": "README.md",
+  "license": "LICENSE",
+  "dependencies": {
+    "puppeteer": "^1.1.1"
+  },
+  "peerDependencies": {
+    "chart.js": "^2.7.2"
+  },
+  "devDependencies": {
+    "@types/chart.js": "^2.7.10",
+    "@types/mocha": "^2.2.48",
+    "@types/node": "^9.4.7",
+    "@types/puppeteer": "^1.1.0",
+    "chart.js": "^2.7.2",
+    "mocha": "^5.0.4",
+    "source-map-support": "^0.5.3",
+    "tslint": "^5.9.1",
+    "tslint-divid": "^1.3.0",
+    "tslint-eslint-rules": "^5.1.0",
+    "tslint-immutable": "^4.5.2",
+    "typescript": "^2.7.2"
+  }
+}
